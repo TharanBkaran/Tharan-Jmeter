@@ -1,0 +1,30 @@
+To install plugins for JMeter via the command line, you can use the jmeter-plugins-manager tool. Here are the steps:
+
+Download the plugins manager: First, download the jmeter-plugins-manager JAR file from the official GitHub repository: JMeter Plugins Manager.
+
+Place the JAR file: Place the downloaded JAR file (jmeter-plugins-manager-x.x.jar) in the lib/ext directory of your JMeter installation.
+
+Run the installation command: Open your command prompt or terminal and navigate to the bin directory of your JMeter installation.
+
+Execute the installation command: Use the jmeter script or jmeter.bat file along with the CMDRunner.jar file to execute the installation command. Here's the basic syntax:
+
+bash
+Copy code
+java -cp CMDRunner.jar;plugins-manager-x.x.jar org.jmeterplugins.repository.PluginManagerCMDInstaller
+Replace x.x with the version number of the plugins manager JAR file you downloaded.
+
+Install plugins: After running the installation command, you can use the jmeter-plugins command to install plugins. Here's the syntax:
+
+bash
+Copy code
+jmeter-plugins install [plugin-name]
+Replace [plugin-name] with the name of the plugin you want to install.
+
+For example, to install the "Dummy Sampler" plugin, you would run:
+
+bash
+Copy code
+jmeter-plugins install jpgc-dummy
+Similarly, you can install other plugins by providing their respective plugin names.
+
+After running the installation command, JMeter will download and install the specified plugin(s) for you. You can then use them in your test plans as needed.
