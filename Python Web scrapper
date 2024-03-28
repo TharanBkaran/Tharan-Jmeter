@@ -1,0 +1,11 @@
+import requests
+from bs4 import BeautifulSoup
+
+url = 'https://example.com'
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
+
+# Extract relevant information
+titles = soup.find_all('h2', class_='title')
+for title in titles:
+    print(title.text.strip())
