@@ -1,0 +1,19 @@
+To export JMeter reports using the command prompt and save them locally, you can follow these steps:
+
+Run JMeter test from command line: First, execute your JMeter test plan from the command line as usual. Use the -n option to run JMeter in non-GUI mode, and specify the path to your test plan (-t) and the location to save the results (-l). For example:
+
+bash
+Copy code
+jmeter -n -t /path/to/your/testplan.jmx -l /path/to/save/results.jtl
+This command will run your test plan and save the results in the specified JTL file.
+
+Generate dashboard report: After the test completes, you can generate a dashboard report using JMeter's jmeter.bat (on Windows) or jmeter script (on Unix-like systems). Use the -g option to specify the path to the JTL file generated during the test and the path to save the dashboard report. For example:
+
+bash
+Copy code
+jmeter -g /path/to/save/results.jtl -o /path/to/save/dashboard
+This command will generate the dashboard report and save it to the specified directory.
+
+Access the report: Once the command executes successfully, you can navigate to the directory where you saved the dashboard report. Open the index.html file in a web browser to view the report locally.
+
+By following these steps, you can export JMeter reports using the command prompt and save them to your local machine.
