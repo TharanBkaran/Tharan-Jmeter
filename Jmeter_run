@@ -1,0 +1,49 @@
+--Here's the basic syntax:
+
+bash
+Copy code
+./jmeter -n -t [path to your JMX file] -l [path to save the results file]
+Explanation of the parameters:
+
+-n: Specifies JMeter to run in non-GUI (headless) mode.
+-t: Specifies the path to your JMX test script file.
+-l: Specifies the path to save the results file.
+For example:
+
+bash
+Copy code
+./jmeter -n -t /path/to/your/test.jmx -l /path/to/save/results.jtl
+--This command will execute your test script /path/to/your/test.jmx and save the results in /path/to/save/results.jtl.
+
+--Optional parameters: You can also include other parameters to customize the test execution, such as the number of threads, the duration of the test, etc. You can see the available options by running ./jmeter --help.
+
+--View the results: Once the test execution completes, you can view the results using JMeter's GUI or by analyzing the results file generated during the test run
+
+
+
+To run JMeter from the command prompt (CMD), you need to navigate to the bin directory of your JMeter installation and execute the jmeter.bat file. Here's how you can do it:
+
+Open Command Prompt (CMD).
+
+Navigate to the bin directory of your JMeter installation using the cd command. For example, if JMeter is installed in C:\apache-jmeter-5.4.1, you would type:
+
+bash
+Copy code
+cd C:\apache-jmeter-5.4.1\bin
+Once you are in the bin directory, you can run JMeter in non-GUI (headless) mode using the jmeter.bat script. Here's the basic syntax:
+
+css
+Copy code
+jmeter -n -t [path to your JMX file] -l [path to save the results file]
+Replace [path to your JMX file] with the path to your JMX test script file and [path to save the results file] with the desired path to save the results file.
+
+For example:
+
+lua
+Copy code
+jmeter -n -t C:\path\to\your\test.jmx -l C:\path\to\save\results.jtl
+Press Enter to execute the command.
+
+JMeter will start running the test defined in the specified JMX file and will save the results in the specified JTL file. You'll see the progress and summary of the test execution in the Command Prompt window. Once the test is completed, you can analyze the results file.
+
+
